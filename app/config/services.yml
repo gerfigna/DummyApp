@@ -1,0 +1,18 @@
+services:
+    sonata.admin.product:
+        class: AppBundle\Admin\ProductAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Product" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Product
+            - ~
+
+    sonata.admin.tickets:
+        class: AppBundle\Admin\TicketAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Tickets" }
+        arguments:
+            - ~
+            - AppBundle\Entity\Ticket
+            - ~
